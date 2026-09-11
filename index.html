@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age of War Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- Main Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- HUD (Heads Up Display) -->
+        <div id="hud">
+            <!-- Player Stats -->
+            <div class="hud-section player-stats">
+                <div class="stat">
+                    <span class="label">Gold:</span>
+                    <span id="playerGold" class="value">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">HP:</span>
+                    <span id="playerHP" class="value">100</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Age:</span>
+                    <span id="playerAge" class="value">Stone</span>
+                </div>
+            </div>
+            
+            <!-- Enemy Stats -->
+            <div class="hud-section enemy-stats">
+                <div class="stat">
+                    <span class="label">Enemy Gold:</span>
+                    <span id="enemyGold" class="value">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Enemy HP:</span>
+                    <span id="enemyHP" class="value">100</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Enemy Age:</span>
+                    <span id="enemyAge" class="value">Stone</span>
+                </div>
+            </div>
+
+            <!-- Wave Info -->
+            <div class="hud-section wave-info">
+                <div class="stat">
+                    <span class="label">Wave:</span>
+                    <span id="waveNumber" class="value">1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Time:</span>
+                    <span id="gameTime" class="value">00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- UI Panels -->
+        <div id="bottomUI">
+            <!-- Unit Selection Panel -->
+            <div class="ui-panel units-panel">
+                <h3>Units</h3>
+                <div id="unitButtons" class="button-grid"></div>
+            </div>
+
+            <!-- Upgrade Panel -->
+            <div class="ui-panel upgrades-panel">
+                <h3>Upgrades & Techs</h3>
+                <div id="techButtons" class="button-grid"></div>
+            </div>
+
+            <!-- Age Upgrade Panel -->
+            <div class="ui-panel age-panel">
+                <h3>Ages</h3>
+                <div id="ageButtons" class="button-grid"></div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="overlay">
+            <div class="game-over-panel">
+                <h1 id="gameOverTitle">Game Over</h1>
+                <p id="gameOverMessage"></p>
+                <button id="restartButton" class="btn-restart">Restart Game</button>
+            </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pauseMenu" class="overlay">
+            <div class="pause-panel">
+                <h1>PAUSED</h1>
+                <button id="resumeButton" class="btn-pause">Resume</button>
+                <button id="restartPauseButton" class="btn-pause">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
